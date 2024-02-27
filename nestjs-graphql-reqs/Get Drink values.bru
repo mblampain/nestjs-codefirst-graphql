@@ -1,0 +1,25 @@
+meta {
+  name: Get Drink values
+  type: graphql
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/graphql
+  body: graphql
+  auth: none
+}
+
+body:graphql {
+  {
+    drinks {
+      ... on Tea {
+        name
+      }
+      ... on Coffee {
+        name
+        brand
+      }
+    }
+  }
+}

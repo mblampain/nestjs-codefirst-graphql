@@ -1,0 +1,19 @@
+meta {
+  name: Delete row
+  type: graphql
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/graphql
+  body: graphql
+  auth: none
+}
+
+body:graphql {
+  mutation {
+    removeCoffee(id: 2) {
+      name
+    }
+  }
+}

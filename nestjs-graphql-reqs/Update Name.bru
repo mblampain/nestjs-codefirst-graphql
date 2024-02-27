@@ -1,0 +1,21 @@
+meta {
+  name: Update Name
+  type: graphql
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/graphql
+  body: graphql
+  auth: none
+}
+
+body:graphql {
+  mutation {
+    updateCoffee(id: 3, updateCoffeeInput: {
+      name: "Updated"
+    }) {
+      name
+    }
+  }
+}

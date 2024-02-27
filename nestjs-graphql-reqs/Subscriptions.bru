@@ -1,0 +1,21 @@
+meta {
+  name: Subscriptions
+  type: graphql
+  seq: 7
+}
+
+post {
+  url: http://localhost:3000/graphql
+  body: graphql
+  auth: none
+}
+
+body:graphql {
+  subscription {
+    coffeeAdded {
+      id
+      name
+      brand
+    }
+  }
+}

@@ -1,0 +1,31 @@
+meta {
+  name: Create Record
+  type: graphql
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/graphql
+  body: graphql
+  auth: none
+}
+
+body:graphql {
+  mutation {
+    createCoffee(createCoffeeInput: {
+      name: "Yozz",
+      brand: "Buddybrew",
+      flavors: ["chocolate", "vanilla"]
+      type: ROBUSTA
+    }) {
+      id,
+      name,
+      brand,
+      flavors {
+        id
+        name
+      }
+      type
+    }
+  }
+}

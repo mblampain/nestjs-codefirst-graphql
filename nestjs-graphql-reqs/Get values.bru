@@ -1,0 +1,26 @@
+meta {
+  name: Get values
+  type: graphql
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/graphql
+  body: graphql
+  auth: none
+}
+
+body:graphql {
+  {
+    coffees {
+      id
+      name
+      brand
+      createdAt
+      flavors {
+        id
+        name
+      }
+    }
+  }
+}

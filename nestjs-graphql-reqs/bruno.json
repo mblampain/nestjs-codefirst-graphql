@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "nestjs-graphql-reqs",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
